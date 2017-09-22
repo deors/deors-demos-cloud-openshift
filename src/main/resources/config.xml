@@ -19,9 +19,9 @@
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://${OPENSHIFT_MYSQL_DB_HOST}:${OPENSHIFT_MYSQL_DB_PORT}/${OPENSHIFT_APP_NAME}" />
-        <property name="username" value="${OPENSHIFT_MYSQL_DB_USERNAME}" />
-        <property name="password" value="${OPENSHIFT_MYSQL_DB_PASSWORD}" />
+        <property name="url" value="jdbc:mysql://${MYSQL_TEST_SERVICE_HOST}:${MYSQL_TEST_SERVICE_PORT}/${MYSQL_DATABASE}" />
+        <property name="username" value="${MYSQL_USER}" />
+        <property name="password" value="${MYSQL_PASSWORD}" />
         <property name="maxWait" value="5000" />
         <property name="maxActive" value="15" />
     </bean>
@@ -36,7 +36,7 @@
           class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
         <property name="annotatedClasses">
             <list>
-                <value>deors.demos.cloud.rhc.entities.CodesImpl</value>
+                <value>deors.demos.cloud.openshift.entities.CodesImpl</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -48,14 +48,14 @@
         </property>
     </bean>
 
-    <bean id="codes" class="deors.demos.cloud.rhc.entities.CodesImpl" />
+    <bean id="codes" class="deors.demos.cloud.openshift.entities.CodesImpl" />
 
-    <context:component-scan base-package="deors.demos.cloud.rhc.repositories">
+    <context:component-scan base-package="deors.demos.cloud.openshift.repositories">
         <context:include-filter type="annotation"
                                 expression="org.springframework.stereotype.Repository" />
     </context:component-scan>
 
-    <context:component-scan base-package="deors.demos.cloud.rhc.services">
+    <context:component-scan base-package="deors.demos.cloud.openshift.services">
         <context:include-filter type="annotation"
                                 expression="org.springframework.stereotype.Service" />
     </context:component-scan>
