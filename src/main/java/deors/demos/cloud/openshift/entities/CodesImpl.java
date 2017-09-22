@@ -1,4 +1,4 @@
-package deors.demos.cloud.rhc.entities;
+package deors.demos.cloud.openshift.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

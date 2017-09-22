@@ -1,12 +1,12 @@
-package deors.demos.cloud.rhc.repositories;
+package deors.demos.cloud.openshift.repositories;
 
 import java.util.Collection;
 
 import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 
-import deors.demos.cloud.rhc.entities.Codes;
-import deors.demos.cloud.rhc.entities.CodesImpl;
+import deors.demos.cloud.openshift.entities.Codes;
+import deors.demos.cloud.openshift.entities.CodesImpl;
 
 /**
  * The Codes data access object implementation using Hibernate.

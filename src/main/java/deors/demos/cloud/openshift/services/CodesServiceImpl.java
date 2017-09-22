@@ -1,4 +1,4 @@
-package deors.demos.cloud.rhc.services;
+package deors.demos.cloud.openshift.services;
 
 import java.util.Collection;
 
@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import deors.demos.cloud.rhc.entities.Codes;
-import deors.demos.cloud.rhc.repositories.CodesDAO;
+import deors.demos.cloud.openshift.entities.Codes;
+import deors.demos.cloud.openshift.repositories.CodesDAO;
 
 /**
  * The Codes service implementation using Spring Transaction.

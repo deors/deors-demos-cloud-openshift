@@ -1,4 +1,4 @@
 /**
  * Entity classes for 'Codes' sample application.
  */
-package deors.demos.cloud.rhc.entities;
+package deors.demos.cloud.openshift.entities;

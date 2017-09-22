@@ -1,4 +1,4 @@
-package deors.demos.cloud.rhc.controllers;
+package deors.demos.cloud.openshift.controllers;
 
 import java.util.Collection;
 
@@ -12,8 +12,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import deors.demos.cloud.rhc.entities.Codes;
-import deors.demos.cloud.rhc.services.CodesService;
+import deors.demos.cloud.openshift.entities.Codes;
+import deors.demos.cloud.openshift.services.CodesService;
 
 /**
  * Controller for Codes table views.

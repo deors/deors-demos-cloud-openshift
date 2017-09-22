@@ -11,7 +11,7 @@
            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd"
        default-autowire="byName">
 
-    <context:component-scan base-package="deors.demos.cloud.rhc.controllers">
+    <context:component-scan base-package="deors.demos.cloud.openshift.controllers">
         <context:include-filter type="annotation"
                                 expression="org.springframework.stereotype.Controller" />
     </context:component-scan>

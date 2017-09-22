@@ -1,4 +1,4 @@
-package deors.demos.cloud.rhc.services;
+package deors.demos.cloud.openshift.services;
 
 import static org.junit.Assert.assertEquals;
 
@@ -9,11 +9,11 @@ import java.util.List;
 import org.easymock.EasyMock;
 import org.junit.Test;
 
-import deors.demos.cloud.rhc.entities.Codes;
-import deors.demos.cloud.rhc.entities.CodesImpl;
-import deors.demos.cloud.rhc.repositories.CodesDAO;
-import deors.demos.cloud.rhc.services.CodesService;
-import deors.demos.cloud.rhc.services.CodesServiceImpl;
+import deors.demos.cloud.openshift.entities.Codes;
+import deors.demos.cloud.openshift.entities.CodesImpl;
+import deors.demos.cloud.openshift.repositories.CodesDAO;
+import deors.demos.cloud.openshift.services.CodesService;
+import deors.demos.cloud.openshift.services.CodesServiceImpl;
 
 public class CodesServiceTestCase {
 

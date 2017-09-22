@@ -1,9 +1,9 @@
-package deors.demos.cloud.rhc.services;
+package deors.demos.cloud.openshift.services;
 
 import java.util.Collection;
 
-import deors.demos.cloud.rhc.entities.Codes;
-import deors.demos.cloud.rhc.repositories.CodesDAO;
+import deors.demos.cloud.openshift.entities.Codes;
+import deors.demos.cloud.openshift.repositories.CodesDAO;
 
 /**
  * The Codes service interface.
