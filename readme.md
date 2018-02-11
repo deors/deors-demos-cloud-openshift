@@ -1,10 +1,10 @@
-deors.demos.cloud.openshift
-===========================
+# deors-demos-cloud-openshift
 
-Example of Spring-based web application, deployed in OpenShift Container Platform 3 on WildFly
-server.
+Demonstration of a simple Java web application deployed on Red Hat OpenShift Container Platform 3.
 
-This project is an evolution of deors.demos.cloud.rhc, which was targetted at OpenShift 2.
+The application is Spring-based and deployed on WildFly server.
+
+This project is an evolution of deors-demos-cloud-rhc, which was targetted at OpenShift 2.
 
 The steps needed to recreate this project in your own OpenShift Online 3 account (analogous steps
 will work at any OCP installation) are the following:
