@@ -26,20 +26,21 @@
         <commons-collections.version>3.2.1</commons-collections.version>
         <commons-dbcp.version>1.4</commons-dbcp.version>
         <javassist.version>3.12.0.GA</javassist.version>
-        <derby.version>10.8.2.2</derby.version>
+        <hsqldb.version>1.8.0.10</hsqldb.version>
+        <mysql.version>5.1.6</mysql.version>
         <slf4j.version>1.6.4</slf4j.version>
 
         <junit.version>4.12</junit.version>
         <easymock.version>3.4</easymock.version>
 
-        <jacoco.version>0.7.9</jacoco.version>
+        <jacoco.version>0.8.0</jacoco.version>
         <jacoco.path>${settings.localRepository}/org/jacoco/org.jacoco.agent/${jacoco.version}/org.jacoco.agent-${jacoco.version}-runtime.jar</jacoco.path>
         <jacoco.utReport>${project.build.directory}/jacoco.exec</jacoco.utReport>
         <jacoco.itReport>${project.build.directory}/jacoco-it.exec</jacoco.itReport>
         <jacoco.utAgentConfig>-javaagent:${jacoco.path}=destfile=${jacoco.utReport}</jacoco.utAgentConfig>
         <jacoco.itAgentConfig>-javaagent:${jacoco.path}=destfile=${jacoco.itReport}</jacoco.itAgentConfig>
 
-        <jacoco-listeners.version>4.11.0.10660</jacoco-listeners.version>
+        <jacoco-listeners.version>5.1.0.13090</jacoco-listeners.version>
     </properties>
 
     <build>
@@ -60,7 +61,7 @@
                 <configuration>
                     <argLine>${jacoco.utAgentConfig}</argLine>
                     <excludes>
-                        <exclude>**/it/*TestCase.java</exclude>
+                        <exclude>**/*IntegrationTestCase.java</exclude>
                     </excludes>
                     <properties>
                         <property>
@@ -76,15 +77,14 @@
                 <version>2.20.1</version>
                 <configuration>
                     <includes>
-                        <include>**/it/*TestCase.java</include>
+                        <include>**/*IntegrationTestCase.java</include>
                     </includes>
                 </configuration>
                 <executions>
                     <execution>
-                        <id>integration-test</id>
-                        <phase>integration-test</phase>
                         <goals>
                             <goal>integration-test</goal>
+                            <goal>verify</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -174,13 +174,13 @@
         <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
-            <version>1.8.0.10</version>
+            <version>${hsqldb.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.6</version>
+            <version>${mysql.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -225,7 +225,8 @@
 
     <profiles>
         <profile>
-            <!-- profile activated when building the project in OpenShift -->
+            <!-- When built in OpenShift the 'openshift' profile will be used when invoking mvn. -->
+            <!-- Use this profile for any OpenShift specific customization your app will need. -->
             <id>openshift</id>
             <build>
                 <finalName>rhcfirst</finalName>
