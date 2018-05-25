@@ -16,12 +16,12 @@
     <properties>
         <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
 
-        <java.version>1.7</java.version>
+        <java.version>1.8</java.version>
 
         <javaee.version>6.0</javaee.version>
         <jstl.version>1.2</jstl.version>
 
-        <spring.version>3.0.6.RELEASE</spring.version>
+        <spring.version>4.1.5.RELEASE</spring.version>
         <hibernate.version>3.6.9.Final</hibernate.version>
         <commons-collections.version>3.2.1</commons-collections.version>
         <commons-dbcp.version>1.4</commons-dbcp.version>
@@ -229,7 +229,7 @@
             <!-- Use this profile for any OpenShift specific customization your app will need. -->
             <id>openshift</id>
             <build>
-                <finalName>rhcfirst</finalName>
+                <finalName>ocpfirst</finalName>
                 <plugins>
                     <plugin>
                         <artifactId>maven-war-plugin</artifactId>
